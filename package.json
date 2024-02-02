@@ -1,14 +1,14 @@
 {
-  "name": "static-site",
+  "name": "readmegenerator",
   "version": "1.0.0",
-  "description": "",
+  "description": "README Generator for edX challenge",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "MrKatrish",
+  "license": "MIT",
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.6"
   }
 }

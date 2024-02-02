@@ -75,6 +75,11 @@ async function promptUser() {
         },
         {
             type: 'input',
+            message: "If applicable, provide any tests written for your application and provide examples on how to run them.",
+            name: 'tests'
+        },
+        {
+            type: 'input',
             message: "If applicable, provide guidelines on how other developers can contribute to your project.",
             name: 'contributing' 
         },
@@ -109,6 +114,7 @@ ${answers.description}
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [Credits](#credits)
+- [Tests](#tests)
 - [Questions](#questions)
 - [License](#license)
 
@@ -129,6 +135,9 @@ ${answers.contributing}
 
 ## Credits
 ${answers.credits}
+
+## Tests
+${answers.tests}
 
 ## Questions
 For any questions, please contact me at [${answers.username}](https://github.com/${answers.username}) or email me at ${answers.email}.

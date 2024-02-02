@@ -11,17 +11,18 @@ Project Description
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
 - [Credits](#credits)
+- [Tests](#tests)
 - [Questions](#questions)
 - [License](#license)
 
 ## Installation
-aaa
+AAA
 
 ## Usage
-aaa
+AAA
 
 ## Features
-aaa
+AAA
 
 ## Technologies Used
 - JavaScript
@@ -32,10 +33,13 @@ aaa
 - Git
 
 ## Contributing
-aaa
+AAA
 
 ## Credits
-aaa
+AAA
+
+## Tests
+AAA
 
 ## Questions
 For any questions, please contact me at [MrKatish](https://github.com/MrKatish) or email me at undefined.

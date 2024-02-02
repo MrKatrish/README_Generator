@@ -1,23 +1,62 @@
 # Professional README Generator
 
-## Acceptance Criteria
+## Description
 
-* Create a command-line application that accepts user input.
-  * When a user is prompted for information about the application repository then a high-quality, professional README.md is generated with:
-    * The title of my project 
-    * Sections entitled:
-      * Description 
-      * Table of Contents 
-      * Installation 
-      * Usage 
-      * License 
-      * Contributing 
-      * Tests 
-      * Questions
-    * When a user enters the project title then it is displayed as the title of the README
-    * When a user enters a description, installation instructions, usage information, contribution guidelines, and test instructions then this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-    * When a user chooses a license for their application from a list of options then a badge for that license is added near the top of the README and a notice is added to the section of the README entitled **License** that explains which license the application is covered under
-    * When a user enters their GitHub username then this is added to the section of the README entitled Questions, with a link to their GitHub profile
-    * When a user enters their email address then this is added to the section of the README entitled Questions, with instructions on how to reach them with additional questions
-    * When a user clicks on the links in the **Table of Contents** then they are taken to the corresponding section of the README
+The Professional README Generator is a command-line application designed to simplify the process of creating a well-structured README file for your projects. This tool prompts the user for inputs regarding their project's details, such as title, description, installation instructions, and more, generating a markdown file that can be directly used or further customized. This project aims to save developers time and effort, ensuring that their GitHub repositories are presented professionally.
+
+## Table of Contents
+
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Working Demo](#working-demo)
+- [Credits](#credits)
+- [Technologies Used](#technologies-used)
+
+## Installation
+
+To install the README Generator, follow these steps:
+
+1. Clone the repository to your local machine using `git clone https://github.com/yourusername/readme-generator.git`
+2. Navigate to the cloned directory and run `npm install` to install all necessary dependencies.
+3. Ensure Node.js is installed on your machine to execute the application.
+
+## Usage
+
+To use the README Generator:
+
+1. Navigate to the root directory of the project in your terminal.
+2. Run the command `node index.js` to initiate the prompts.
+3. Answer each prompt regarding your project's details. Your inputs will be compiled into a README.md file.
+4. Once all prompts are answered, the README.md file will be generated in the current directory. You can then review and make any necessary adjustments.
+
+## Features
+
+- Interactive command-line prompts to gather project information
+- Customizable sections including installation, usage, credits, and more
+- Automatic table of contents generation
+- Supports multiple licenses selection
+- Option to include a list of technologies used in the project
+
+## Working Demo
+
+![project_demo](project_demo.gif)
+
+## Credits
+
+This project was inspired by the need for a quick and efficient way to create README files for open source projects. Special thanks to:
+
+- Node.js community for providing invaluable resources.
+- Inquirer.js for their easy-to-use command-line interface.
+- All contributors who tested the application and provided feedback.
+- Our edX Instructors and TA.
+
+## Technologies Used
+
+- JavaScript
+- Node.js
+- Inquirer.js
+
+Your feedback and contributions are welcome! Please feel free to submit issues or pull requests to the repository.
 

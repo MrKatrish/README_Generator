@@ -18,7 +18,7 @@ The Professional README Generator is a command-line application designed to simp
 
 To install the README Generator, follow these steps:
 
-1. Clone the repository to your local machine using `git clone https://github.com/yourusername/readme-generator.git`
+1. Clone the repository to your local machine using `git clone https://github.com/MrKatrish/readme-generator.git`
 2. Navigate to the cloned directory and run `npm install` to install all necessary dependencies.
 3. Ensure Node.js is installed on your machine to execute the application.
 

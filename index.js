@@ -7,7 +7,7 @@ async function promptUser() {
             type: 'input',
             message: "What is your GitHub username? (No @ needed)",
             name: 'username',
-            default: 'connietran-dev',
+            default: 'MrKatish',
             validate: function (answer) {
                 if (answer.length < 1) {
                     return console.log("A valid GitHub username is required.");

@@ -67,9 +67,10 @@ async function promptUser() {
             name: 'contributing'
         },
         {
-            type: 'input',
-            message: "If applicable, provide any tests written for your application and provide examples on how to run them.",
-            name: 'tests'
+            type: 'list',
+            message: "Techologies Used",
+            choices: ['JavaScript', 'Python', 'React', 'Node.js', 'Docker', 'Git'],
+            name: 'technologies'
         },
         {
             type: 'list',
@@ -81,10 +82,8 @@ async function promptUser() {
 }
 
 function generateMarkdown(answers) {
-    const licenseBadge = `![License](https://img.shields.io/badge/license-${encodeURIComponent(answers.license)}-blue.svg)`;
     return `
 # ${answers.title}
-${licenseBadge}
 
 ## Description
 ${answers.description}
@@ -106,11 +105,12 @@ ${answers.usage}
 ## License
 This project is licensed under the ${answers.license} license.
 
+## Technologies Use
+${answers.technologies}
+
 ## Contributing
 ${answers.contributing}
 
-## Tests
-${answers.tests}
 
 ## Questions
 For any questions, please contact me at [${answers.username}](https://github.com/${answers.username}) or email me at ${answers.email}.

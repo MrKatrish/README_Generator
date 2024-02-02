@@ -122,9 +122,15 @@ async function writeToFile(fileName, data) {
 }
 
 async function init() {
+    try {
+        const answers = await promptUser();
+        const markdown = generateMarkdown(answers);
+        await writeToFile("READMETest.md", markdown);
+        console.log("Successfully wrote to READMETest.md");
+    } catch (error) {
+        console.error("Error creating READMETest.md", error);
+    }
+}
 
-
-
-    
 // function call to initialize program
 init();

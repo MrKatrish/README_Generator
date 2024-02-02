@@ -1,8 +1,12 @@
 
-# AAA
+# aa
 
 ## Description
-AAA
+aa
+
+![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/MrKatrish/README_Generator?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/MrKatrish/README_Generator?style=flat&logo=appveyor)
+  
+Check out the badges hosted by [shields.io](https://shields.io/).
 
 ## Table of Contents
 - [Installation](#installation)
@@ -16,31 +20,34 @@ AAA
 - [License](#license)
 
 ## Installation
-AAA
+aaa
 
 ## Usage
-AAA
+aaa
 
 ## Features
-AAA
+aaa
 
 ## Technologies Used
 - JavaScript
+- Python
+- React
 - Node.js
+- Docker
 - Git
 
 ## Contributing
-AAA
+
 
 ## Credits
-AAA
+aaa
 
 ## Tests
-AAA
+
 
 ## Questions
-For any questions, please contact me at [MrKatish](https://github.com/MrKatish) or email me at aa@aaa.AAA.
-    
+For any questions, please contact me at [MrKatish](https://github.com/MrKatish) or email me at aa.
+  
 ## License
-This project is licensed under the MIT License license.
+This project is licensed under the GNU AGPLv3 license.
 

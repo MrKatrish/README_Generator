@@ -1,6 +1,9 @@
 // Import necessary modules from Node.js: `fs` for file system operations, and `inquirer` for interactive command line prompts.
 import fs from 'fs/promises';
 import inquirer from 'inquirer';
+import { fetchGitHubUserInfo } from './utils/api.js'; // Importing from api.js
+import { generateMarkdown } from './utils/generateMarkdown.js'; // Importing from generateMarkdown.js
+
 
 // Define an asynchronous function to prompt the user for input using the inquirer module.
 async function promptUser() {
@@ -103,56 +106,6 @@ async function promptUser() {
     ]);
 }
 
-// Define a function to generate a markdown string based on the user's answers from the prompt.
-function generateMarkdown(answers) {
-    const technologiesList = answers.technologies.map(tech => `- ${tech}`).join('\n');
-    return `
-# ${answers.title}
-
-## Description
-${answers.description}
-
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Contributing](#contributing)
-- [Credits](#credits)
-- [Tests](#tests)
-- [Questions](#questions)
-- [License](#license)
-
-## Installation
-${answers.installation}
-
-## Usage
-${answers.usage}
-
-## Features
-${answers.features}
-
-## Technologies Used
-${technologiesList}
-
-## Contributing
-${answers.contributing}
-
-## Credits
-${answers.credits}
-
-## Tests
-${answers.tests}
-
-## Questions
-For any questions, please contact me at [${answers.username}](https://github.com/${answers.username}) or email me at ${answers.email}.
-    
-## License
-This project is licensed under the ${answers.license} license.
-
-`;
-}
-
 // Define an asynchronous function to write the generated markdown content to a file.
 async function writeToFile(fileName, data) {
     return fs.writeFile(fileName, data);
@@ -162,11 +115,18 @@ async function writeToFile(fileName, data) {
 async function init() {
     try {
         const answers = await promptUser();
-        const markdown = generateMarkdown(answers); 
+        
+        // Example of using fetchGitHubUserInfo if needed
+        const userInfo = await fetchGitHubUserInfo(answers.username);
+        if (userInfo) {
+            answers.userInfo = userInfo;
+        }
+        
+        const markdown = generateMarkdown(answers);
         await writeToFile("READMETest.md", markdown);
         console.log("Successfully wrote to READMETest.md");
     } catch (error) {
-        console.error("Error creating READMETest.md", error); // Log any errors that occur during the process.
+        console.error("Error creating READMETest.md", error);
     }
 }
 

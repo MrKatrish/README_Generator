@@ -7,7 +7,7 @@ async function promptUser() {
     return inquirer.prompt([
         {
             type: 'input',
-            message: "What is your GitHub username? (No @ needed)",
+            message: "What is your GitHub username?",
             name: 'username',
             default: 'MrKatish', 
             validate: function (answer) { 
@@ -16,6 +16,11 @@ async function promptUser() {
                 }
                 return true;
             }
+        },
+        {
+            type: 'input',
+            message: "What is your email address?",
+            name: 'email' 
         },
         {
             type: 'input',

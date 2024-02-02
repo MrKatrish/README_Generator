@@ -80,14 +80,51 @@ async function promptUser() {
     ]);
 }
 
+function generateMarkdown(answers) {
+    const licenseBadge = `![License](https://img.shields.io/badge/license-${encodeURIComponent(answers.license)}-blue.svg)`;
+    return `
+# ${answers.title}
+${licenseBadge}
+
+## Description
+${answers.description}
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## License
+This project is licensed under the ${answers.license} license.
+
+## Contributing
+${answers.contributing}
+
+## Tests
+${answers.tests}
+
+## Questions
+For any questions, please contact me at [${answers.username}](https://github.com/${answers.username}) or email me at ${answers.email}.
+    `;
+}
+
 async function writeToFile(fileName, data) {
     return fs.writeFile(fileName, data);
 }
 
-promptUser()
-    .then(answers => generateHTML(answers))
-    .then(html => writeToFile('portfolio.html', html))
-    .catch(error => console.error('There was an error:', error));
+async function init() {
 
+
+
+    
 // function call to initialize program
 init();

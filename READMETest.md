@@ -13,19 +13,19 @@ Project Description
 - [Questions](#questions)
 
 ## Installation
-
+aaa
 
 ## Usage
-
+aaa
 
 ## License
-This project is licensed under the GNU AGPLv3 license.
+This project is licensed under the MIT License license.
+
+## Technologies Use
+JavaScript,Node.js,Git
 
 ## Contributing
-
-
-## Tests
-
+aaa
 
 ## Questions
 For any questions, please contact me at [MrKatish](https://github.com/MrKatish) or email me at undefined.

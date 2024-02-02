@@ -4,7 +4,7 @@
 ## Description
 aa
 
-![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/MrKatrish/README_Generator?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/MrKatrish/README_Generator?style=flat&logo=appveyor)
+![Badge for GitHub repo top language](https://img.shields.io/github/languages/top/TomixJasina/Weather_dashboard?style=flat&logo=appveyor) ![Badge for GitHub last commit](https://img.shields.io/github/last-commit/TomixJasina/Weather_dashboard?style=flat&logo=appveyor)
   
 Check out the badges hosted by [shields.io](https://shields.io/).
 
@@ -20,34 +20,31 @@ Check out the badges hosted by [shields.io](https://shields.io/).
 - [License](#license)
 
 ## Installation
-aaa
+aa
 
 ## Usage
-aaa
+aa
 
 ## Features
-aaa
+aa
 
 ## Technologies Used
 - JavaScript
-- Python
-- React
 - Node.js
-- Docker
 - Git
 
 ## Contributing
-
+aa
 
 ## Credits
-aaa
+aa
 
 ## Tests
-
+aa
 
 ## Questions
-For any questions, please contact me at [MrKatish](https://github.com/MrKatish) or email me at aa.
+For any questions, please contact me at [TomixJasina](https://github.com/TomixJasina) or email me at aa@aa.aa.
   
 ## License
-This project is licensed under the GNU AGPLv3 license.
+This project is licensed under the MIT License license.
 

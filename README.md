@@ -41,7 +41,7 @@ To use the README Generator:
 
 ## Working Demo
 
-![project_demo](project_demo.gif)
+![DEMO](working_demo.gif)
 
 ## Credits
 

@@ -60,8 +60,18 @@ async function promptUser() {
         },
         {
             type: 'input',
+            message: "If applicable, provide features to your project.",
+            name: 'features' 
+        },
+        {
+            type: 'input',
             message: "Provide instructions and examples of your project in use for the Usage section.",
             name: 'usage' 
+        },
+        {
+            type: 'input',
+            message: "If applicable, provide credits to your project.",
+            name: 'credits' 
         },
         {
             type: 'input',
@@ -85,6 +95,7 @@ async function promptUser() {
 
 // Define a function to generate a markdown string based on the user's answers from the prompt.
 function generateMarkdown(answers) {
+    const technologiesList = answers.technologies.map(tech => `- ${tech}`).join('\n');
     return `
 # ${answers.title}
 
@@ -94,10 +105,12 @@ ${answers.description}
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [License](#license)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [Tests](#tests)
+- [Credits](#credits)
 - [Questions](#questions)
+- [License](#license)
 
 ## Installation
 ${answers.installation}
@@ -105,18 +118,25 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 
-## License
-This project is licensed under the ${answers.license} license.
+## Features
+${answers.features}
 
-## Technologies Use
-${answers.technologies}
+## Technologies Used
+${technologiesList}
 
 ## Contributing
 ${answers.contributing}
 
+## Credits
+${answers.credits}
+
 ## Questions
 For any questions, please contact me at [${answers.username}](https://github.com/${answers.username}) or email me at ${answers.email}.
-    `;
+    
+## License
+This project is licensed under the ${answers.license} license.
+
+`;
 }
 
 // Define an asynchronous function to write the generated markdown content to a file.

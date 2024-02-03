@@ -1,9 +1,7 @@
 // Import necessary modules from Node.js: `fs` for file system operations, and `inquirer` for interactive command line prompts.
 import fs from 'fs/promises';
 import inquirer from 'inquirer';
-import { fetchGitHubUserInfo } from './utils/api.js'; // Importing from api.js
 import { generateMarkdown } from './utils/generateMarkdown.js'; // Importing from generateMarkdown.js
-
 
 // Define an asynchronous function to prompt the user for input using the inquirer module.
 async function promptUser() {
@@ -12,7 +10,6 @@ async function promptUser() {
             type: 'input',
             message: "What is your GitHub username?",
             name: 'username',
-            default: 'MrKatish', 
             validate: function (answer) { 
                 if (answer.length < 1) {
                     return console.log("A valid GitHub username is required.");
@@ -115,13 +112,6 @@ async function writeToFile(fileName, data) {
 async function init() {
     try {
         const answers = await promptUser();
-        
-        // Example of using fetchGitHubUserInfo if needed
-        const userInfo = await fetchGitHubUserInfo(answers.username);
-        if (userInfo) {
-            answers.userInfo = userInfo;
-        }
-        
         const markdown = generateMarkdown(answers);
         await writeToFile("READMETest.md", markdown);
         console.log("Successfully wrote to READMETest.md");
